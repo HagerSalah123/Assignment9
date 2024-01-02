@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Icon Image -->
+        <link rel="icon" href="bookmark.png">
+        <!-- Fontawesome -->
+        <link rel="stylesheet" href="css/all.min.css">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- CSS Page -->
+        <link rel="stylesheet" href="css/index.css">
+        <title>Bookmarker</title>
+    </head>
+
+    <body>
+
+        <section class="py-5 position-relative sec">
+            <div class="container  p-5 m-5 w-100 m-auto ">
+                <h1 class="text-center main_heading position-relative">Bookmarker</h1>
+                <div class="pt-4 form ">
+                    <div
+                        class="d-flex flex-column align-items-center justify-content-center gap-4 w-100 p-3 mt-1 heading ">
+                        <h2 class="form_heading">
+                            <i class="fa-solid fa-bookmark"></i>
+                            Bookmark your favorite sites
+                            <i class="fa-solid fa-bookmark"></i>
+                        </h2>
+                    </div>
+                    <div class="inputs text-center">
+                        <div class="text-start">
+                            <label for="sitename" class="fw-semibold pb-2">
+                                <i class="fa-solid fa-book-bookmark pe-1"></i>
+                                Site Name
+                            </label>
+                            <input type="text" id="sitename" class="form-control mb-3 " placeholder="Bookmark Name">
+                        </div>
+                        <div class="text-start">
+                            <label for="url" class="fw-semibold pb-2">
+                                <i class="fa-solid fa-link pe-1"></i>
+                                Site URL
+                            </label>
+                            <input type="url" id="url" class="form-control mb-3" placeholder="Website URL">
+                        </div>
+                        <button onclick="add_sites();clear_sites();" id="sub_btn" type="button"
+                            class="btn btn-submit px-5 mb-4">Submit</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive text-center w-75 mx-auto">
+                <table class="table table-striped" style="background-color: #F8F9FA;">
+                    <thead>
+                        <tr class="text-center">
+                            <th scope="col">Index</th>
+                            <th scope="col">Website Name</th>
+                            <th scope="col">Visit</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+            <div class="card  d-none  position-absolute ">
+                <div class="tools d-flex align-items-center m-1 py-3 ps-3">
+                    <div class="circle pb-2 pt-2 d-flex ">
+                        <span class="box red me-2 rounded-circle"></span>
+                        <span class="box yellow me-2  rounded-circle"></span>
+                        <span class="box green me-2 rounded-circle"></span>
+                    </div>
+                </div>
+                <button class="btn closed border-0 position-absolute " id="button">
+                    <i class="fa-solid fa-xmark close fs-3 "></i>
+                </button>
+                <div class="card__content ps-3">
+                    <p class="par m-0 pb-2">Site Name or Url is not valid, Please follow the rules below :</p>
+                    <ol class="rules list-unstyled ">
+                        <li class="d-flex">
+                            <i class="fa-regular fa-circle-right p-2 "></i>Site name must
+                            contain at least 3 characters
+                        </li>
+                        <li class="d-flex">
+                            <i class="fa-regular fa-circle-right "></i>Site URL must be a
+                            valid one
+                        </li>
+                    </ol>
+
+
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
+            integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/all.min.js"></script>
+        <script src="js/index.js"></script>
+
+    </body>
+
+</html>
